@@ -1,8 +1,5 @@
-Here is the complete `README.md` in Markdown format:
 
----
 
-```markdown
 # Ultimate Ad Blocker
 
 ## Description
@@ -19,7 +16,7 @@ Ultimate Ad Blocker is a comprehensive Chrome extension that enhances your brows
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/your-username/ultimate-ad-blocker.git
-   ```
+   
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top-right corner.
 4. Click "Load unpacked" and select the folder where you cloned this repository.
@@ -32,7 +29,7 @@ Ultimate Ad Blocker is a comprehensive Chrome extension that enhances your brows
    - **Activate Manual Blocking**: Click any element to hide it.
 
 ## File Structure
-```
+
 ultimate-ad-blocker/
 │
 ├── manifest.json           # Chrome extension manifest file
@@ -44,7 +41,7 @@ ultimate-ad-blocker/
 ├── styles.css              # Styling for the popup
 ├── icons/                  # Folder for extension icons
 └── README.md               # Documentation
-```
+
 
 ## Features in Detail
 
@@ -67,19 +64,19 @@ ultimate-ad-blocker/
 We welcome contributions! Here’s how you can contribute:
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix:
-   ```bash
+   
    git checkout -b feature-name
-   ```
+   
 3. Commit your changes:
-   ```bash
+   
    git commit -m "Add feature-name"
-   ```
+   
 4. Push to your branch:
-   ```bash
+   
    git push origin feature-name
-   ```
+   
 5. Submit a pull request.
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out via email: mateojudasl@gmail.com or create an issue in this repository.
-```
+
