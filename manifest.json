@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Hello Extensions of the world!",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback",
+      "scripting",
+      "activeTab"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["*://*.youtube.com/*", "*://*.cnn.com/*"], 
+        "js": ["content.js"],
+        "run_at": "document_idle" 
+    },
+    {
+      "matches": ["*://*.twitch.tv/*"], 
+      "js": ["block_twitch.js"],
+      "run_at": "document_idle"
+    }
+    ],
+    "declarative_net_request": {
+      "rule_resources": [
+          {
+              "id": "ruleset_1",
+              "enabled": true,
+              "path": "rules.json"
+          }
+      ]
+  }
+  }
