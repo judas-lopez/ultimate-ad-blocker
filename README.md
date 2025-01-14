@@ -1,7 +1,7 @@
 
 # Ultimate Ad Blocker
 
-**UAB** is a lightweight, customizable browser extension designed to block ads on popular platforms like YouTube, Twitch, CNN, and more. Built by ACM Cyber, this tool ensures a seamless, ad-free browsing experience while offering additional features like manual element deletion.
+**UAB** is a lightweight, customizable browser extension designed to block ads on popular platforms like YouTube, Twitch, CNN, and more. This tool ensures a seamless, ad-free browsing experience while offering additional features like manual element deletion.
 
 ## Features
 
