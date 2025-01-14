@@ -1,82 +1,97 @@
 
-
 # Ultimate Ad Blocker
 
-## Description
-Ultimate Ad Blocker is a comprehensive Chrome extension that enhances your browsing experience by blocking unwanted advertisements. It is designed to handle a variety of ads, including pop-ups, video ads, Twitch ads, and more. Additionally, the extension offers a manual blocking mode, allowing you to hide any webpage element with a simple click.
+**UAB** is a lightweight, customizable browser extension designed to block ads on popular platforms like YouTube, Twitch, CNN, and more. Built by ACM Cyber, this tool ensures a seamless, ad-free browsing experience while offering additional features like manual element deletion.
 
 ## Features
-- **Ad Blocker**: Blocks network requests to known ad domains using declarative Net Requests.
-- **Twitch Ad Blocker**: Swaps Twitch ads with the main stream for uninterrupted viewing.
-- **Manual Blocking**: Lets you hide any element on the page by clicking it while the mode is active.
-- **Toggleable Settings**: Enable or disable each feature from the extension popup.
-- **Persistent State**: Remembers your settings between sessions using Chrome's storage.
+
+- **Ad Blocking**:
+  - Blocks video ads and image ads on YouTube, Twitch, CNN, and other websites.
+  - Removes intrusive elements and enhances browsing speed.
+- **Manual Element Deletion**:
+  - Allows users to hide unwanted elements on any webpage with a simple click.
+- **Customizable Controls**:
+  - Enable or disable ad-blocking rules dynamically.
+  - Adjust video playback and volume controls for Twitch streams.
 
 ## Installation
-1. Clone or download this repository:
+
+1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/ultimate-ad-blocker.git
-   
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" in the top-right corner.
-4. Click "Load unpacked" and select the folder where you cloned this repository.
+   ```
+
+2. Open your browser and navigate to the Extensions page:
+   - For Chrome: `chrome://extensions`
+   - For Edge: `edge://extensions`
+
+3. Enable **Developer Mode**.
+
+4. Click **Load unpacked** and select the cloned repository folder.
+
+5. The extension will now be installed and ready to use.
 
 ## Usage
-1. Click the extension icon in the Chrome toolbar to open the popup.
-2. Use the toggles to:
-   - **Enable/Disable the Ad Blocker**: Blocks ads on websites.
-   - **Turn on/off Twitch Ad Blocker**: Manages Twitch stream ads dynamically.
-   - **Activate Manual Blocking**: Click any element to hide it.
 
-## File Structure
+1. **Ad Blocking**:
+   - The extension automatically blocks ads on supported platforms.
+   - Use the toggle buttons in the popup to enable or disable ad-blocking rules.
 
-ultimate-ad-blocker/
-│
-├── manifest.json           # Chrome extension manifest file
-├── popup.html              # HTML for the extension popup
-├── popup.js                # JavaScript for managing popup interactions
-├── content.js              # Handles generic ad-blocking logic
-├── block_twitch.js         # Manages Twitch ad-blocking logic
-├── rules.json              # Declarative Net Request rules for blocking ads
-├── styles.css              # Styling for the popup
-├── icons/                  # Folder for extension icons
-└── README.md               # Documentation
+2. **Manual Element Deletion**:
+   - Click the "Enable Element Blocker" button in the popup.
+   - Click on any unwanted element on the webpage to hide it.
 
+3. **Twitch Stream Controls**:
+   - Adjust playback, mute/unmute, and volume using custom buttons.
+   - Replace ads with uninterrupted streams.
 
-## Features in Detail
+## Supported Platforms
 
-### Ad Blocker
-- Utilizes Chrome's `declarativeNetRequest` API to block network requests to known ad domains.
-- Rules are defined in `rules.json` for easy customization.
+- YouTube
+- Twitch
+- CNN
+- General websites with intrusive ads
 
-### Twitch Ad Blocker
-- Dynamically swaps Twitch ad videos with the main stream using `MutationObserver`.
-- Provides custom controls for playback and volume adjustment.
+## Files Overview
 
-### Manual Blocking
-- Activates a mode that allows you to hide any webpage element with a click.
-- Uses Chrome's storage to remember the mode's state between sessions.
+### HTML & CSS
+- `UI.html`: The main interface for the extension's popup.
+- `styles.css`: Styling for the popup and toggle buttons.
 
-### Persistent State
-- All toggle states persist across sessions using `chrome.storage.local`.
+### JavaScript
+- `block_youtube.js`: Blocks YouTube ads.
+- `block_twitch.js`: Handles Twitch ads and provides custom stream controls.
+- `block_cnn.js`: Blocks ads on CNN.
+- `content.js`: Enables manual element deletion.
+- `popup.js`: Manages popup interactions.
+- `popup_deleter.js`: Toggles ad-blocking rules.
+
+### Manifest
+- `manifest.json`: Configures the extension's permissions and behavior.
+
+### Rules
+- `rules.json`: Defines declarative ad-blocking rules for specific domains.
 
 ## Contributing
-We welcome contributions! Here’s how you can contribute:
+
+Contributions are welcome! If you have suggestions or find a bug, please open an issue or submit a pull request.
+
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
-   
+2. Create a new branch:
+   ```bash
    git checkout -b feature-name
-   
+   ```
 3. Commit your changes:
-   
+   ```bash
    git commit -m "Add feature-name"
-   
+   ```
 4. Push to your branch:
-   
+   ```bash
    git push origin feature-name
-   
-5. Submit a pull request.
+   ```
+5. Open a pull request.
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out via email: mateojudasl@gmail.com or create an issue in this repository.
 
+Enjoy a cleaner, faster internet with **Ultimate Ad Blocker**!
