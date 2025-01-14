@@ -1,37 +1,41 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions of the world!",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello_extensions.png"
-    },
+    "name": "Cyberblock",
+    "version": "1.0.0",
+    "description": "Adblocker made by ACM Cyber",
     "permissions": [
-      "declarativeNetRequest",
-      "declarativeNetRequestFeedback",
-      "scripting",
-      "activeTab"
+        "declarativeNetRequest",
+        "storage"
     ],
-    "content_scripts": [
-    {
-        "matches": ["*://*.youtube.com/*", "*://*.cnn.com/*"], 
-        "js": ["content.js"],
-        "run_at": "document_idle" 
+    "action": {
+        "default_popup": "index.html"
     },
-    {
-      "matches": ["*://*.twitch.tv/*"], 
-      "js": ["block_twitch.js"],
-      "run_at": "document_idle"
-    }
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["elementdeleter.js"]
+        },
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["blockyt.js"]
+        },
+        {
+            "matches": ["*://*.cnn.com/*"],
+            "js": ["blockcnn.js"]
+        },
+        {
+            "matches": ["*://*.twitch.tv/*"],
+            "js": ["blocktwitch.js"]
+        }
     ],
-    "declarative_net_request": {
-      "rule_resources": [
-          {
-              "id": "ruleset_1",
-              "enabled": true,
-              "path": "rules.json"
-          }
-      ]
-  }
+    "declarative_net_request" : {
+        "rule_resources" : [
+            {
+                "id" : "ruleset",
+                "enabled" : true,
+                "path" : "rules.json"
+            }
+        ]
+    },
+    "host_permissions" : ["<all_urls>"]
   }
